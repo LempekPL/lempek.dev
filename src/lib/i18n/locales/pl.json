@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "projects": "Projekty"
+  },
+  "test": {
+    "test": "testowanie tej {test}ki"
+  }
+}

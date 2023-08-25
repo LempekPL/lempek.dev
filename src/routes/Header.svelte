@@ -5,7 +5,7 @@
 <header>
 	<div class="corner">
 		<a href="/">
-			<img src={logo} alt="SvelteKit" />
+			<img src={logo} alt="Lempek" />
 		</a>
 	</div>
 </header>

@@ -1,27 +1,14 @@
-<script>
-
+<script lang="ts">
+	import { t } from "svelte-i18n"
 </script>
 
 <svelte:head>
-	<title>Lempek</title>
-	<meta name="title" content="Lempek" />
-	<meta name="description" content="Learn everything about Lempek." />
-	<meta name="theme-color" content="#69E621">
-
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://lempek.dev/" />
-	<meta property="og:title" content="Lempek" />
-	<meta property="og:description" content="Learn about more about Lempek." />
-	<meta property="og:image" content="$lib/LEMPEKbanner.png" />
-
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="https://metatags.io/" />
-	<meta property="twitter:title" content="Lempek" />
-	<meta property="twitter:description" content="Learn about more about Lempek." />
-	<meta property="twitter:image" content="$lib/images/LEMPEKbanner.png" />
+    <title>Lempek</title>
 </svelte:head>
 
+<p>Testing</p>
 
+<p>{$t("test.test", {values: {test: "app"}})}</p>
 
 <style>
 
