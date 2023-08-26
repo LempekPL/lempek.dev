@@ -6,9 +6,7 @@
     <title>Lempek</title>
 </svelte:head>
 
-<p>Testing</p>
 
-<p>{$t("test.test", {values: {test: "app"}})}</p>
 
 <style>
 

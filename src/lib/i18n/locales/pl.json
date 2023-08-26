@@ -1,8 +1,8 @@
 {
+  "home": {
+    "home": "Główna"
+  },
   "projects": {
     "projects": "Projekty"
-  },
-  "test": {
-    "test": "testowanie tej {test}ki"
   }
 }
