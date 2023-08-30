@@ -1,6 +1,6 @@
 <script lang="ts">
 	import logo from "$lib/images/lempekDesign.png";
-	import {t, locale} from "svelte-i18n";
+	import {locale} from "svelte-i18n";
 	import themeColor from "$lib/store-theme";
 	function toggleTheme() {
 		themeColor.update(t => t === "light" ? "dark" : "light")
@@ -16,22 +16,23 @@
 			<img src={logo} alt="Lempek" />
 		</a>
 	</div>
-	<nav>
-		<a href="/">{$t("home.home")}</a>
-		<a href="/projects">{$t("projects.projects")}</a>
-	</nav>
+	<div></div>
 	<div>
 		<button on:click={toggleTheme}>Change theme</button>
 		<button on:click={toggleLanguage}>Change language</button>
 	</div>
 </header>
 
-<style>
+<style lang="postcss">
 	header {
 		display: flex;
 		justify-content: space-between;
 		padding: 1rem;
-		/*outline: red solid 1px;*/
+		/*background-color: var(--background);*/
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		backdrop-filter: blur(.2rem);
 	}
 
 	.logo img {

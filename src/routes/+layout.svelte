@@ -1,45 +1,39 @@
-<script>
-    import Header from './Header.svelte';
-    import './styles.css';
-    import './fonts.css'
-    import storeTheme from "$lib/store-theme.ts";
+<script lang="ts">
+    import "./styles.css";
+    import "./fonts.css";
+    import Header from "./Header.svelte";
+    import ShortBio from "./ShortBio.svelte";
+    import Navigation from "./Navigation.svelte";
+    import storeTheme from "$lib/store-theme";
 </script>
 
-<div class="app"
-     class:light={$storeTheme === "light"}
-     class:dark={$storeTheme === "dark"}
->
+<svelte:head>
+    <meta name="color-scheme" content={$storeTheme === "system" ? "light dark" : $storeTheme}/>
+    <link rel="stylesheet" href={`/theme/${$storeTheme}.css`} />
+</svelte:head>
+
+<div class="app">
     <Header/>
+    <ShortBio/>
+    <Navigation/>
 
     <main>
         <slot/>
     </main>
-
-    <footer>
-
-    </footer>
 </div>
 
-<style lang="postcss">
-    .light {
-        background-color: white;
-    }
-
-    .dark {
-        background-color: grey;
-    }
-
+<style lang="scss">
     .app {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        background-color: var(--background);
     }
 
     main {
         flex: 1;
         display: flex;
         flex-direction: column;
-        padding: 1rem;
         width: 100%;
         max-width: 64rem;
         margin: 0 auto;
