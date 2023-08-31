@@ -3,13 +3,11 @@
 </script>
 
 <svelte:head>
-    <title>{$t("projects.title")}</title>
+    <title>{$t("about.title")}</title>
 </svelte:head>
 
 <div>
 
 </div>
 
-<style>
 
-</style>

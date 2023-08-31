@@ -1,4 +1,9 @@
 :root {
+    --default-text: #000000;
     --background: #ffffff;
+    --header: #d7d7d7;
     --bio-background: #d7d7d7;
+    --navbar: #d7d7d7;
+    --navbar-button-select: #b9b9b9;
+    --navbar-button: #adadad;
 }

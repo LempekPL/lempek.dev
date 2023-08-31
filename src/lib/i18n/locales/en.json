@@ -1,8 +1,20 @@
 {
+  "bio": {
+    "short": "I'm {years} years old. I've been programming for {programmingYears} years. Some of my interests are programming, playing video games, stuff related with transport (trains) and thinkering with arduino and logic gates.",
+    "long": "Programuję już od około od {programmingYears} lat. Moje ulubione gry to \uD83D\uDFE9 Minecraft, ⚙ Factorio i \uD83D\uDEE0 Scrap Mechanic, czasem sobie zagram też w gry symulacyjne (ETS2, MaSzyna). W wolnym czasie rysuje i modeluje. Moim ulubionym zwierzęciem jest królik \uD83D\uDC07"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "More about Lempek",
+    "projects": "Projects"
+  },
   "home": {
-    "home": "Home"
+    "title": "Home page"
   },
   "projects": {
-    "projects": "Projects"
+    "title": "Projects"
+  },
+  "about": {
+    "title": "More about me"
   }
 }

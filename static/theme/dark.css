@@ -1,4 +1,6 @@
 :root {
+    --default-text: #e5e5e5;
     --background: #808080;
-    --bio-background: #696969;
+    --header: #696969;
+    --bio-background: #808080;
 }

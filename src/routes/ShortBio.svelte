@@ -1,5 +1,8 @@
 <script>
     import lempek from "$lib/images/lempekIRL.png";
+    import { t } from "svelte-i18n";
+    const years = Math.abs(new Date(Date.now()-new Date(2004, 2, 29).getTime()).getUTCFullYear() - 1970);
+    const programmingYears = Math.abs(new Date(Date.now()-new Date(2018, 8, 16).getTime()).getUTCFullYear() - 1970);
 </script>
 
 <div class="short-bio">
@@ -12,7 +15,7 @@
             <p>Lempek</p>
         </div>
         <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, quod.
+            {$t("bio.short", { values: {years , programmingYears} })}
         </div>
     </div>
 </div>
@@ -22,7 +25,6 @@
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas: ". content .";
-    background-color: var(--bio-background);
   }
 
   .main-info {
@@ -30,6 +32,9 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 3fr;
+    background-color: var(--bio-background);
+    padding: 1rem 1rem 1.5rem;
+    border-radius: 0 0 1rem 1rem;
   }
 
   .picture-irl {
