@@ -1,15 +1,14 @@
 <script lang="ts">
     import {t} from "svelte-i18n";
     import {page} from "$app/stores";
+
+    $: path = $page.url.pathname.slice($page.url.pathname.lastIndexOf('/'))
 </script>
 
 <nav>
-    <a href="/"
-       class:selected={"/"===$page.url.pathname.slice($page.url.pathname.lastIndexOf('/'))}>{$t("nav.home")}</a>
-    <a href="/about"
-       class:selected={"/about"===$page.url.pathname.slice($page.url.pathname.lastIndexOf('/'))}>{$t("nav.about")}</a>
-    <a href="/projects"
-       class:selected={"/projects"===$page.url.pathname.slice($page.url.pathname.lastIndexOf('/'))}>{$t("nav.projects")}</a>
+    <a href="/" class:selected={"/"===path}>{$t("nav.home")}</a>
+    <a href="/about" class:selected={"/about"===path}>{$t("nav.about")}</a>
+    <a href="/projects" class:selected={"/projects"===path}>{$t("nav.projects")}</a>
 </nav>
 
 <style lang="scss">
