@@ -5,7 +5,12 @@
     import ShortBio from "./ShortBio.svelte";
     import Navigation from "./Navigation.svelte";
     import storeTheme from "$lib/store-theme";
-    import {fly} from 'svelte/transition';
+    import {fade} from "svelte/transition";
+    import {afterNavigate} from "$app/navigation";
+
+    afterNavigate(() => {
+        window.scrollTo({top: 0, behavior: "smooth"})
+    })
 
     export let data;
 </script>
@@ -22,8 +27,8 @@
 
     <main>
         {#key data.url}
-            <div in:fly={{ x: -200, duration: 300, delay: 300 }}
-                 out:fly={{ x: 200, duration: 300 }}>
+            <div in:fade={{ duration: 500, delay: 500 }}
+                 out:fade={{ duration: 500 }}>
                 <slot/>
             </div>
         {/key}
@@ -47,5 +52,14 @@
     max-width: 64rem;
     margin: 0 auto;
     box-sizing: border-box;
+    position: relative;
+
+    div:nth-child(n+2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
   }
 </style>
